@@ -82,6 +82,7 @@ public class Pet {
 
     public void dormir(){
         this.energia += 25;
+        this.acordado = false;
         validar();
     }
 
@@ -92,6 +93,7 @@ public class Pet {
     }
     public void acordar(){
         this.energia += 25;
+        this.acordado = true;
         validar();
     }
     public void comer(Alimento alimento){
@@ -104,16 +106,31 @@ public class Pet {
         validar();
     }
 
+    public String simounaoVivo(){
+        if (this.vivo == true){
+            return "Sim";
+        } else{
+            return "Não";
+        }
+    }
+    public String simounaoAcordado(){
+        if (this.acordado == true){
+            return "Sim";
+        } else{
+            return "Não";
+        }
+    }
+
     @Override
     public String toString() {
-        return "Nome:" + this.nome +
-                "Vivo: " + this.vivo +
-                "Acordado: " + this.acordado +
-                "Sede: " + this.sede +
-                "Fome: " + this.fome +
-                "Energia: " + this.energia +
-                "Diversão: " + this.diversao +
-                "Higiene: " + this.higiene +
-                "Vontade de ir ao banheiro: " + this.vontadeBanheiro;
+        return "Nome: " + this.nome  + '\n' +
+                "Vivo: " + simounaoVivo() + '\n' +
+                "Acordado: " + simounaoAcordado() + '\n' +
+                "Sede: " + this.sede + '\n' +
+                "Fome: " + this.fome + '\n' +
+                "Energia: " + this.energia + '\n' +
+                "Diversão: " + this.diversao + '\n' +
+                "Higiene: " + this.higiene + '\n' +
+                "Vontade de ir ao banheiro: " + this.vontadeBanheiro + '\n';
     }
 }

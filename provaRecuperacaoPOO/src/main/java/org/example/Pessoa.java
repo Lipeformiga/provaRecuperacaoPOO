@@ -45,23 +45,36 @@ public class Pessoa {
     }
 
     public void darAguaParaPet(){
-        pet.beberAgua();
+        if (this.pet != null){
+            pet.beberAgua();
+        }
+
     }
 
     public void brincarComPet(Brincadeira brincadeira){
-        pet.brincar(brincadeira);
+        if (this.pet != null){
+            pet.brincar(brincadeira);
+        }
+
     }
 
     public void alimentarPet(Alimento alimento){
-        pet.comer(alimento);
+        if (this.pet != null){
+            pet.comer(alimento);
+        }
     }
 
     public void levarPetParaFazerNecessidades(){
-        pet.fazerNecessidades();
+        if (this.pet != null){
+            pet.fazerNecessidades();
+        }
+
     }
 
     public void limparPet(){
-        pet.limpar();
+        if (this.pet != null){
+            pet.limpar();
+        }
     }
 
     public String avaliarPet(){
@@ -71,10 +84,8 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "cpf=" + cpf +
-                ", nome='" + nome + '\'' +
-                ", pet=" + pet +
-                '}';
+        return "CPF: "+ this.cpf + '\n' +
+                "Nome: "+ this.nome + '\n' +
+                "Pet: "+ this.pet;
     }
 }

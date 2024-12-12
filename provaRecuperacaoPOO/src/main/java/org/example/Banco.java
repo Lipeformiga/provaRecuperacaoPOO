@@ -9,20 +9,20 @@ public class Banco {
     private static ArrayList<Pet> pets = new ArrayList<>();
     private static ArrayList<Pessoa> pessoas = new ArrayList<>();
 
-    public void cadastrarPet(Pet pet){
+    public static void cadastrarPet(Pet pet){
         pets.add(pet);
     }
-    public void cadastrarPessoa(Pessoa pessoa){
+    public static void cadastrarPessoa(Pessoa pessoa){
         pessoas.add(pessoa);
     }
-    public void removerPet(Pet pet){
+    public static void removerPet(Pet pet){
         pets.remove(pet);
     }
-    public void removerPessoa(Pessoa pessoa){
+    public static void removerPessoa(Pessoa pessoa){
         pessoas.remove(pessoa);
     }
 
-    public Alimento procurarAlimento(int codigo){
+    public static Alimento procurarAlimento(int codigo){
         for(Alimento alimento : alimentos){
             if(alimento.getCodigo() == codigo){
                 return alimento;
@@ -31,7 +31,7 @@ public class Banco {
         return null;
     }
 
-    public Brincadeira procurarBincadeira(int codigo){
+    public static Brincadeira procurarBrincadeira(int codigo){
         for(Brincadeira brincadeira : brincadeiras){
             if (brincadeira.getCodigo() == codigo){
                 return brincadeira;
@@ -40,7 +40,7 @@ public class Banco {
         return null;
     }
 
-    public Pet procurarPet(int codigo){
+    public static Pet procurarPet(int codigo){
         for (Pet pet : pets){
             if(pet.getCodigo() == codigo){
                 return pet;
@@ -49,7 +49,7 @@ public class Banco {
         return null;
     }
 
-    public Pessoa procurarPessoa(long cpf){
+    public static Pessoa procurarPessoa(long cpf){
         for (Pessoa pessoa : pessoas){
             if (pessoa.getCpf() == cpf){
                 return pessoa;
@@ -58,7 +58,7 @@ public class Banco {
         return null;
     }
 
-    public Pessoa login(long cpf, String senha){
+    public static Pessoa login(long cpf, String senha){
         for (Pessoa pessoa : pessoas){
             if(pessoa.getCpf() == cpf && pessoa.getSenha().equals(senha)){
                 return pessoa;

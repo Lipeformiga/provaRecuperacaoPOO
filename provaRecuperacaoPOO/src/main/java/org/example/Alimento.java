@@ -3,7 +3,7 @@ package org.example;
 public class Alimento {
 
     private String nome;
-    private static int geradorCodigos = 0;
+    private static int geradorCodigos = 1;
     private int nutricao;
     private int codigo;
 

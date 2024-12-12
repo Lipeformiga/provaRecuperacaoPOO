@@ -2,7 +2,7 @@ package org.example;
 
 public class Brincadeira {
 
-    private static int geradorCodigo = 0;
+    private static int geradorCodigo = 1;
     private int codigo;
     private String nome;
     private int cansaco;
@@ -11,7 +11,7 @@ public class Brincadeira {
     private int sujeira;
     private int divertimento;
 
-    public Brincadeira(String nome, int cansaco, int fome, int sede, int sujeira, int divertimento) {
+    public Brincadeira(String nome, int divertimento, int cansaco, int fome, int sede, int sujeira) {
         this.nome = nome;
         this.cansaco = cansaco;
         this.fome = fome;
@@ -22,30 +22,30 @@ public class Brincadeira {
     }
 
     public int getCodigo() {
-        return codigo;
+        return this.codigo;
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public int getCansaco() {
-        return cansaco;
+        return this.cansaco;
     }
 
     public int getFome() {
-        return fome;
+        return this.fome;
     }
 
     public int getSede() {
-        return sede;
+        return this.sede;
     }
 
     public int getSujeira() {
-        return sujeira;
+        return this.sujeira;
     }
 
     public int getDivertimento() {
-        return divertimento;
+        return this.divertimento;
     }
 }
